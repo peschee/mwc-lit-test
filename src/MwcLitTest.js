@@ -1,4 +1,5 @@
 import { LitElement, html, css } from 'lit';
+import '@material/mwc-drawer';
 
 const logo = new URL('../assets/open-wc-logo.svg', import.meta.url).href;
 
@@ -61,6 +62,9 @@ export class MwcLitTest extends LitElement {
 
   render() {
     return html`
+      <mwc-drawer>
+        <p>Hello, drawer…</p>
+      </mwc-drawer>
       <main>
         <div class="logo"><img alt="open-wc logo" src=${logo} /></div>
         <h1>${this.title}</h1>
